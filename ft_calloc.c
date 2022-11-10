@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/10 18:50:22 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/10 19:16:28 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 #include "stdlib.h"
 #include "libft.h"
 
-void	*calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*tab;
 	size_t	max_size;
-	
-	max_size = nmemb *  size;
+
+	max_size = nmemb * size;
 	if (size && max_size / size != nmemb)
 		return (NULL);
 	tab = malloc(nmemb * size);
