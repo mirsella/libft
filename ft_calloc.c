@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/10 19:16:28 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/10 20:04:21 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,13 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	size_t	max_size;
 
 	max_size = nmemb * size;
+	if (max_size == 0)
+	{
+		tab = malloc(1);
+		if (tab == NULL)
+			return (NULL);
+		return (tab);
+	}
 	if (size && max_size / size != nmemb)
 		return (NULL);
 	tab = malloc(nmemb * size);

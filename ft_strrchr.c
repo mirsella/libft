@@ -6,24 +6,24 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/10 00:12:23 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/10 19:50:11 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int		i;
-	char	*tmp;
+	char	*last;
 
-	i = 0;
-	tmp = 0;
-	while (s[i])
+	last = 0;
+	while (*s)
 	{
-		if (s[i] == c)
-			tmp = ((char *) s + i);
-		i++;
+		if (*s == (char)c)
+			last = (char *)s;
+		s++;
 	}
-	if (s[i] == c)
-		tmp = ((char *) s + i);
-	return (tmp);
+	if (last)
+		return (last);
+	if (c == 0)
+		return ((char *)s);
+	return (0);
 }
