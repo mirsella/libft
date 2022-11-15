@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/10 17:50:24 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:45:30 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	size_t	i;
 
 	if (!dest || !src)
-		return (0);
+		return (dest);
 	i = 0;
 	while (src + i && i < n)
 	{
