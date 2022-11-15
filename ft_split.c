@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/13 15:43:10 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/15 14:04:05 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,19 +54,23 @@ static char	*getword(char const *s, int i, char c)
 	return (res);
 }
 
-char	**ft_split(char const *s, char c)
+static void	freetab(char **res, int i)
+{
+	while (i >= 0)
+	{
+		free(res[i]);
+		i--;
+	}
+	free(res);
+}
+
+static char	**loop(char const *s, char c, char **tab)
 {
 	int		i;
 	int		wordcount;
-	char	**tab;
 
-	if (!s)
-		return (NULL);
 	i = 0;
 	wordcount = 0;
-	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
-	if (!tab)
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
@@ -74,6 +78,11 @@ char	**ft_split(char const *s, char c)
 		if (s[i])
 		{
 			tab[wordcount] = getword(s, i, c);
+			if (!tab[wordcount])
+			{
+				freetab(tab, wordcount);
+				return (NULL);
+			}
 			wordcount++;
 		}
 		while (s[i] && s[i] != c)
@@ -81,4 +90,16 @@ char	**ft_split(char const *s, char c)
 	}
 	tab[wordcount] = 0;
 	return (tab);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**tab;
+
+	if (!s)
+		return (NULL);
+	tab = malloc(sizeof(char *) * (count_words(s, c) + 1));
+	if (!tab)
+		return (NULL);
+	return (loop(s, c, tab));
 }
