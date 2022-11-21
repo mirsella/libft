@@ -13,7 +13,7 @@ NAME = libft.a
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar rcs $(NAME)
+	ar rcs $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
