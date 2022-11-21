@@ -6,14 +6,14 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:40:14 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/21 16:47:10 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:13:13 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <unistd.h>
 
-size_t	ft_putnbr(int n)
+int	ft_putnbr(int n)
 {
 	int		i;
 

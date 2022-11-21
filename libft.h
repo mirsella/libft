@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/21 16:46:34 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/21 17:13:29 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,9 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
+int	ft_putchar(char c);
+int	ft_putstr(char *s);
+int	ft_putnbr(int n);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
@@ -50,9 +53,6 @@ char	*get_next_line(int fd);
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t	ft_strlen(const char *s);
-size_t	ft_putchar(char c);
-size_t	ft_putstr(char *s);
-size_t	ft_putnbr(int n);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
