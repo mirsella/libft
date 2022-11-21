@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:40:14 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/21 16:46:09 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/21 16:47:10 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 size_t	ft_putnbr(int n)
 {
-	char	c;
 	int		i;
 
 	i = 0;
