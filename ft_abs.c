@@ -6,11 +6,11 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/22 18:32:57 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/22 18:33:07 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:43:38 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_abs(int n)
+int	ft_abs(long long n)
 {
 	if (n < 0)
 		return (-n);
