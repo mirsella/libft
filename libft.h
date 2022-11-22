@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/22 22:52:48 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/22 22:56:56 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,8 @@ int			ft_putnbr(long long n);
 int			ft_putnbr_base(long long n, char *base);
 int			ft_max(int a, int b);
 int			ft_min(int a, int b);
-int			ft_nbrlen(int n);
-int			ft_nbrlen_base(int n, int base);
+int			ft_nbrlen(long long n);
+int			ft_nbrlen_base(long long n, int base);
 int			ft_abs(int n);
 long long	ft_llabs(long long n);
 char		**ft_split(char const *s, char c);
