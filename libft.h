@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/22 17:51:13 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/22 18:32:50 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ int		ft_putstr(char *s);
 int		ft_putnbr(int n);
 int		ft_max(int a, int b);
 int		ft_min(int a, int b);
+int		ft_nbrlen(int n);
+int		ft_nbrlen_base(int n);
+int		ft_abs(int n);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strchr(const char *s, int c);
