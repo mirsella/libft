@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:40:14 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/23 17:40:17 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/23 17:45:44 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ static int	ft_isbase(char *base)
 int	ft_putnbr_base(long long nbr, char *base)
 {
 	int			baselen;
-	int			*byteswrotes;
+	int			byteswrotes;
 	long long	nb;
 
 	baselen = ft_strlen(base);
@@ -83,11 +83,11 @@ int	ft_putnbr_base(long long nbr, char *base)
 		return (0);
 	if (nbr < 0)
 	{
-		count_bytes(byteswrotes, write(1, "-", 1));
+		count_bytes(&byteswrotes, write(1, "-", 1));
 		nb = -nb;
 	}
 	if (nb >= baselen)
-		count_bytes(byteswrotes, ft_putnbr_base(nb / baselen, base));
-	count_bytes(byteswrotes, write(1, &base[nb % baselen], 1));
-	return (*byteswrotes);
+		count_bytes(&byteswrotes, ft_putnbr_base(nb / baselen, base));
+	count_bytes(&byteswrotes, write(1, &base[nb % baselen], 1));
+	return (byteswrotes);
 }
