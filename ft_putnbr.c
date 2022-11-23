@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:40:14 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/23 17:30:12 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/23 17:40:17 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,24 +25,24 @@ static void	count_bytes(int *counter, int byteswrotes)
 
 int	ft_putnbr(long long n)
 {
-	int		*i;
+	int		i;
 
-	*i = 0;
+	i = 0;
 	if (n < 0)
 	{
-		count_bytes(i, write(1, "-", 1));
+		count_bytes(&i, write(1, "-", 1));
 		n = -n;
 	}
 	if (n > 9)
 	{
-		count_bytes(i, ft_putnbr(n / 10));
-		count_bytes(i, ft_putnbr(n % 10));
+		count_bytes(&i, ft_putnbr(n / 10));
+		count_bytes(&i, ft_putnbr(n % 10));
 	}
 	else
 	{
-		count_bytes(i, ft_putchar(n + '0'));
+		count_bytes(&i, ft_putchar(n + '0'));
 	}
-	return (*i);
+	return (i);
 }
 
 static int	ft_isbase(char *base)
