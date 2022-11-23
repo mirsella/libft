@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:39:22 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/23 18:04:41 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/23 18:06:45 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,15 +29,15 @@ static void	count_bytes(int *counter, int byteswrotes)
 
 int	ft_putstr(char *str)
 {
-	int	*byteswrotes;
+	int	byteswrotes;
 	int	i;
 
 	i = 0;
 	byteswrotes = 0;
 	while (str[i])
 	{
-		count_bytes(byteswrotes, ft_putchar(str[i]));
+		count_bytes(&byteswrotes, ft_putchar(str[i]));
 		i++;
 	}
-	return (*byteswrotes);
+	return (byteswrotes);
 }
