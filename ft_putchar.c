@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/21 16:39:22 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/23 17:29:41 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/23 18:04:41 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int	ft_putstr(char *str)
 	while (str[i])
 	{
 		count_bytes(byteswrotes, ft_putchar(str[i]));
+		i++;
 	}
 	return (*byteswrotes);
 }
