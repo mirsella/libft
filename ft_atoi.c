@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/21 14:01:06 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/11/27 21:59:42 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ft_atoi(const char *str)
 	int	neg;
 	int	res;
 
+	if (!str)
+		return (0);
 	i = 0;
 	neg = 1;
 	res = 0;
