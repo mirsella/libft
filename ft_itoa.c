@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2022/11/13 15:54:12 by mirsella         ###   ########.fr       */
+/*   Updated: 2022/12/26 12:44:06 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	*ft_itoa(int value)
 	len = ft_nbrlen(value);
 	neg = 1;
 	str = malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (NULL);
 	str[len] = 0;
 	len--;
 	if (value < 0)

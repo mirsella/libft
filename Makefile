@@ -28,4 +28,8 @@ re: fclean all
 bonus: $(OBJS) $(BOBJS)
 	ar rcs $(NAME) $(OBJS) $(BOBJS)
 
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRCS) $(BSRCS)
+	gcc -nostartfiles -shared -o libft.so $(OBJS) $(BOBJS)
+
 .PHONY: all clean fclean re bonus
