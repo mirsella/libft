@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2022/12/26 15:17:42 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/01/02 15:41:20 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,10 @@ size_t				ft_strlen(const char *s);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
+t_list				*ft_list_find(t_list *begin_list, void *data_ref,
+						int (*cmp)(void *, void *));
 t_list				*ft_lstnew(void *content);
+t_list				*ft_list_at(t_list *begin_list, unsigned int nbr);
 void				*ft_calloc(size_t count, size_t size);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
