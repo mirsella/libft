@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/01/02 15:41:20 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/01/02 17:25:33 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,8 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
+int					ft_isascending(int *tab, int size);
+int					ft_isdescending(int *tab, int size);
 int					ft_atoi(const char *str);
 long long			ft_atoll(const char *str);
 int					ft_isalnum(int c);
