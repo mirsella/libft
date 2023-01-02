@@ -6,13 +6,14 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/02 15:35:08 by mirsella          #+#    #+#             */
-/*   Updated: 2023/01/02 15:38:30 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/01/02 15:54:12 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_list_find(t_list *begin_list, void *data_ref, int (*cmp)(void *, void *))
+t_list	*ft_list_find(t_list *begin_list, void *data_ref,
+		int (*cmp)(void *, void *))
 {
 	t_list	*list;
 
