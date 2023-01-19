@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 23:13:50 by mirsella          #+#    #+#             */
-/*   Updated: 2023/01/19 14:47:09 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/01/19 15:12:36 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
-	if ((int)end < 0)
-		return (ft_strdup(""));
 	while (s1[start] && ft_strchr(set, s1[start]))
 		start++;
-	while (s1[end] && ft_strchr(set, s1[end]))
+	while (end > 0 && ft_strchr(set, s1[end]))
 		end--;
 	end++;
 	if (start == ft_strlen(s1))
