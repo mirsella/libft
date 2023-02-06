@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/06 17:23:02 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:31:05 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ int					ft_ullnbrlen_base(unsigned long long n, int base);
 int					ft_abs(int n);
 long long			ft_llabs(long long n);
 int					ft_printf(const char *format, ...);
-char 				**ft_strsfree(char **strs);
+char				**ft_strsfree(char **strs);
 char				**ft_split(char const *s, char c);
 char				*pass_spaces(char *str);
 char				*ft_itoa(int n);
