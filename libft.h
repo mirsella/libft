@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/06 13:40:56 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/02/06 17:23:02 by lgillard         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ int					ft_isdescending(int *tab, int size);
 int					ft_atoi(const char *str);
 long long			ft_atoll(const char *str);
 int					ft_isalnum(int c);
+int					ft_isspace(char c);
 int					ft_isalpha(int c);
 int					ft_isascii(int c);
 int					ft_isdigit(int c);
@@ -59,6 +60,7 @@ long long			ft_llabs(long long n);
 int					ft_printf(const char *format, ...);
 char 				**ft_strsfree(char **strs);
 char				**ft_split(char const *s, char c);
+char				*pass_spaces(char *str);
 char				*ft_itoa(int n);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
