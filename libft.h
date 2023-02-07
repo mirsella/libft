@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/06 17:31:05 by lgillard         ###   ########.fr       */
+/*   Updated: 2023/02/07 20:42:30 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,7 @@ char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_get_next_line(int fd, int freee);
+char				*ft_free_tab(char **tab);
 size_t				ft_strlcat(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlcpy(char *dst, const char *src, size_t dstsize);
 size_t				ft_strlen(const char *s);
