@@ -65,7 +65,7 @@ char				*ft_strchr(const char *s, int c);
 char				*ft_strdup(const char *s1);
 char				**ft_tabdup(char **tab);
 char				*ft_strjoin(const char *s1, const char *s2);
-int					pass_spaces(char *str);
+int					skip_spaces(char *str);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 char				*ft_strrchr(const char *s, int c);

@@ -15,7 +15,7 @@ int	ft_isspace(char c)
 	return ((c >= 9 && c <= 13) || c == 32);
 }
 
-int	pass_spaces(char *str)
+int	skip_spaces(char *str)
 {
 	int	i;
 
