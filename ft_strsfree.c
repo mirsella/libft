@@ -1,35 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strfindword.c                                   :+:      :+:    :+:   */
+/*   ft_strsfree.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/02/07 21:16:25 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/07 21:26:45 by mirsella         ###   ########.fr       */
+/*   Created: 2023/02/06 13:39:19 by mirsella          #+#    #+#             */
+/*   Updated: 2023/02/06 17:30:51 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stdlib.h"
 
-char	*ft_strfindword(char *s, const char *word)
+char	**ft_strsfree(char **strs)
 {
 	int	i;
-	int	findi;
 
-	if (word[0] == '\0')
-		return (s);
+	if (!strs)
+		return (NULL);
 	i = 0;
-	while (s[i] != '\0')
-	{
-		findi = 0;
-		while (s[i + findi] == word[findi])
-		{
-			if (word[findi + 1] == '\0')
-				return (&s[i]);
-			findi++;
-		}
-		i++;
-	}
-	return (NULL);
+	while (strs[i])
+		free(strs[i++]);
+	free(strs);
+	return (strs);
 }
