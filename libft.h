@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/12 17:45:50 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/02/12 20:57:19 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ t_list				*ft_lstfind(t_list *begin_list, void *data_ref,
 						int (*cmp)(void *, void *));
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnew_strs(int size, char **strs);
+char				*ft_lst_to_str(t_list *lst);
 t_list				*ft_lstat(t_list *begin_list, unsigned int nbr);
 void				ft_lst_remove_if(t_list **begin_list, void *data_ref,
 						int (*cmp)(void *, void *), void (*free_fct)(void *));
