@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/09 21:38:28 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/02/12 17:38:13 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,11 +81,11 @@ size_t				ft_tablen(char **tab);
 t_list				*ft_lstlast(t_list *lst);
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 						void (*del)(void *));
-t_list				*ft_list_find(t_list *begin_list, void *data_ref,
+t_list				*ft_lstfind(t_list *begin_list, void *data_ref,
 						int (*cmp)(void *, void *));
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnew_strs(int size, char **strs);
-t_list				*ft_list_at(t_list *begin_list, unsigned int nbr);
+t_list				*ft_lstat(t_list *begin_list, unsigned int nbr);
 void				ft_lst_remove_if(t_list **begin_list, void *data_ref,
 						int (*cmp)(void *, void *), void (*free_fct)(void *));
 void				ft_intsort(int *tab, int size);
