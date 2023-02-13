@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/02/13 09:45:59 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/02/13 09:51:55 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
 void				ft_lstadd_back(t_list **alst, t_list *newel);
+void				ft_lstsort(t_list **lst, int (*cmp)(void *, void *));
 void				ft_lstadd_front(t_list **alst, t_list *newel);
 void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstdelone(t_list *lst, void (*del)(void*));
