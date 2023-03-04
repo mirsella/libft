@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/03/04 15:03:03 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/03/04 15:59:07 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,6 +112,6 @@ int					ft_putendl_fd(char *s, int fd);
 int					ft_putnbr_fd(int n, int fd);
 int					ft_putstr_fd(char *s, int fd);
 void				ft_striteri(char *s, void (*f)(unsigned int, char *));
-void				*ft_realloc(void *ptr, size_t size);
+void				*ft_realloc(void *ptr, size_t ptrsize, size_t newsize);
 
 #endif
