@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 16:25:11 by mirsella          #+#    #+#             */
-/*   Updated: 2023/07/09 21:23:24 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/07/09 21:22:15 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *))
 	if (!lst)
 		return ;
 	if (del)
-			del(lst->content);
+		del(lst->content);
 	free(lst);
 }

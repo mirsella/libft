@@ -6,7 +6,7 @@
 /*   By: mirsella <mirsella@protonmail.com>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 22:35:33 by mirsella          #+#    #+#             */
-/*   Updated: 2023/03/04 15:59:07 by mirsella         ###   ########.fr       */
+/*   Updated: 2023/07/10 15:03:22 by mirsella         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@
 #  define BUFFER_SIZE 4096
 # endif
 
-typedef struct s_list
-{
+typedef struct s_list {
 	void			*content;
 	struct s_list	*next;
 }	t_list;
@@ -101,6 +100,7 @@ void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memset(void *b, int c, size_t len);
 void				ft_bzero(void *s, size_t n);
+void				ft_lstreverse(t_list **lst);
 void				ft_lstadd_back(t_list **alst, t_list *newel);
 void				ft_lstsort(t_list **lst, int (*cmp)());
 void				ft_lstadd_front(t_list **alst, t_list *newel);
