@@ -8,6 +8,9 @@ OBJS = $(SRCS:.c=.o)
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+ifdef DEV
+    CFLAGS += -g3
+endif
 
 NAME = libft.a
 
