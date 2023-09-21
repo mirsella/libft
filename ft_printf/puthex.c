@@ -26,13 +26,13 @@ static void ft_print_hash(t_formatoptions *fo, long long n, char conversion) {
   if (fo->hash && n != 0) {
     fo->width -= 2;
     if (fo->zero) {
-      count_bytes(&fo->byteswrotes, ft_printf("0%c", conversion));
+      count_bytes(&fo->byteswrotes, ft_dprintf(fo->fd, "0%c", conversion));
       ft_print_width_hex(fo, n);
     } else {
       if (fo->dash == 0) {
         ft_print_width_hex(fo, n);
       }
-      count_bytes(&fo->byteswrotes, ft_printf("0%c", conversion));
+      count_bytes(&fo->byteswrotes, ft_dprintf(fo->fd, "0%c", conversion));
     }
   } else if (fo->dash == 0)
     ft_print_width_hex(fo, n);
