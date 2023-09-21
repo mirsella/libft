@@ -108,7 +108,7 @@ void ft_lstdelone(t_list *lst, void (*del)(void *));
 void ft_lstiter(t_list *lst, void (*f)(void *));
 int ft_putchar_fd(char c, int fd);
 int ft_putendl_fd(char *s, int fd);
-int ft_putnbr_fd(int n, int fd);
+int ft_putnbr_fd(long long n, int fd);
 int ft_putstr_fd(char *s, int fd);
 void ft_striteri(char *s, void (*f)(unsigned int, char *));
 void *ft_realloc(void *ptr, size_t ptrsize, size_t newsize);

@@ -62,7 +62,7 @@ void ft_print_pointer(t_formatoptions *fo, unsigned long long n) {
   if (n == 0) {
     if (fo->dash == 0)
       ft_print_width_ullhex(fo, 100000);
-    count_bytes(&fo->byteswrotes, ft_putstr("(nil)"));
+    count_bytes(&fo->byteswrotes, ft_putstr_fd("(nil)", fo->fd));
     if (fo->dash == 1)
       ft_print_width_ullhex(fo, 100000);
   } else {

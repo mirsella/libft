@@ -51,7 +51,7 @@ void ft_print_int(t_formatoptions *fo, int n) {
     ft_print_width(fo, n);
   while (precision-- > ft_nbrlen(ft_llabs(n)))
     count_bytes(&fo->byteswrotes, ft_putchar_fd('0', fo->fd));
-  count_bytes(&fo->byteswrotes, ft_putnbr(ft_llabs(n)));
+  count_bytes(&fo->byteswrotes, ft_putnbr_fd(ft_llabs(n), fo->fd));
   if (fo->dash == 1)
     ft_print_width(fo, n);
 }
